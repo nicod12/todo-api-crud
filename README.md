@@ -35,7 +35,7 @@ Delete Item: Removes an existing item from the system.
 
 ## PUT /items/:id
 
-![put](https://github.com/nicod12/blog-app/assets/85652867/9bab2399-553f-4512-acf2-45fac4bf3f1f)
+![put](https://github.com/nicod12/blog-app/assets/85652867/51a7cb23-2e2f-4a8f-b716-7a23e7f0768f)
 <br>
 ![upd](https://github.com/nicod12/blog-app/assets/85652867/49249397-e45a-40fe-b3b1-3fa39df331d7)
 <br>
@@ -43,6 +43,6 @@ Delete Item: Removes an existing item from the system.
 
 
 ## DELETE /items/:id
-![delete-res](https://github.com/nicod12/blog-app/assets/85652867/8bb5543c-eec2-49f5-be0e-fbcd9314cc50)
-<br>
 ![delete](https://github.com/nicod12/blog-app/assets/85652867/57fdb25f-ec92-4e64-bf4c-2d5ae49b9c64)
+<br>
+![delete-res](https://github.com/nicod12/blog-app/assets/85652867/8bb5543c-eec2-49f5-be0e-fbcd9314cc50)
