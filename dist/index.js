@@ -3,10 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.items = void 0;
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
-const items = [
+const itemRoute_1 = require("./routes/itemRoute");
+exports.items = [
     {
         title: "item 1",
         description: "Do thing",
@@ -35,13 +37,8 @@ const items = [
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.json());
-app.get("/", (req, res) => {
-    return res.status(200).send({ response: "Hello world" });
-});
-app.get("/items", (req, res) => {
-    console.log("Se recibió una solicitud para obtener todos los ítems.");
-    return res.status(200).send(items);
-});
+app.get("/", itemRoute_1.itemRouter);
+app.get("/items", itemRoute_1.itemRouter);
 app.post("/items", (req, res) => {
     if (!req.body)
         return res.status(400).send("No body provided");
@@ -49,19 +46,19 @@ app.post("/items", (req, res) => {
     if (!item.id) {
         item.id = Math.floor(Math.random() * 1000000);
     }
-    items.push(item);
-    res.status(200).send(items);
+    exports.items.push(item);
+    res.status(200).send(exports.items);
 });
 app.get("/items/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    const item = items.find((item) => item.id === id);
+    const item = exports.items.find((item) => item.id === id);
     if (!item)
         return res.status(404).send("Item not found");
     res.status(200).send(item);
 });
 app.put("/items/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    const item = items.find((item) => item.id === id);
+    const item = exports.items.find((item) => item.id === id);
     if (!item)
         return res.status(404).send("Item not found");
     const updateItem = req.body;
@@ -73,15 +70,15 @@ app.put("/items/:id", (req, res) => {
         item.description = updateItem.description;
     if (updateItem.done)
         item.done = updateItem.done;
-    res.status(200).send(items);
+    res.status(200).send(exports.items);
 });
 app.delete("/items/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    const itemIndex = items.findIndex((item) => item.id === id);
+    const itemIndex = exports.items.findIndex((item) => item.id === id);
     if (!itemIndex)
         return res.status(404).send("item not found");
-    items.splice(itemIndex, 1);
-    res.status(200).send(items);
+    exports.items.splice(itemIndex, 1);
+    res.status(200).send(exports.items);
 });
 const PÖRT = 3000;
 app.listen(PÖRT, () => {
