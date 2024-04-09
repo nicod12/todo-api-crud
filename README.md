@@ -35,7 +35,7 @@ Delete Item: Removes an existing item from the system.
 
 ## PUT /items/:id
 
-![put](https://github.com/nicod12/blog-app/assets/85652867/51a7cb23-2e2f-4a8f-b716-7a23e7f0768f)
+![Captura de pantalla 2024-04-09 122245](https://github.com/nicod12/blog-app/assets/85652867/a13f11aa-f0d2-405c-8ed8-ee7d68610275)
 <br>
 ![upd](https://github.com/nicod12/blog-app/assets/85652867/49249397-e45a-40fe-b3b1-3fa39df331d7)
 <br>
