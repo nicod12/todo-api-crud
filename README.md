@@ -1,6 +1,6 @@
 ## Todo-Api
 
-##Description
+## Description
 This API provides a system for managing items (e.g., to-do tasks, products, etc.).
 
 ##Features
@@ -9,7 +9,7 @@ Retrieve Item: Retrieves all existing items in the system.
 Update Item: Allows users to update the information of an existing item.
 Delete Item: Removes an existing item from the system.
 
-#Technologies Used
+# Technologies Used
 <ul>
   <li>Node.js</li>
   <li>Express</li>
@@ -19,7 +19,7 @@ Delete Item: Removes an existing item from the system.
 </ul>
 
 
-##GET /items
+## GET /items
 
 ![get](https://github.com/nicod12/todo-api-crud/assets/85652867/e24f2470-e670-4378-b4cc-db58124c1b60)
 <br>
