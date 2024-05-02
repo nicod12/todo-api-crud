@@ -18,6 +18,11 @@ Delete Item: Removes an existing item from the system.
   <li>Body-parser</li>
 </ul>
 
+## Install
+npm i
+<br>
+npm run start
+
 ## Usage Examples
 ## GET /items
 
